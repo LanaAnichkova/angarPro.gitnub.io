@@ -1,0 +1,36 @@
+@font-face{
+  font-family: "BloggerSans Light";
+
+  src:
+    url("../fonts/BloggerSanslight.woff2") format("woff2"),
+    url("../fonts/BloggerSanslight.woff") format("woff");
+    font-weight: 200;
+}
+
+@font-face{
+  font-family: "BloggerSans Regular";
+
+  src:
+    url("../fonts/BloggerSans.woff2") format("woff2"),
+    url("../fonts/BloggerSans.woff") format("woff");
+    font-weight: 400;
+}
+
+@font-face{
+  font-family: "BloggerSans Medium";
+
+  src:
+    url("../fonts/BloggerSansmedium.woff2") format("woff2"),
+    url("../fonts/BloggerSansmedium.woff") format("woff");
+    font-weight: 600;
+}
+
+@font-face{
+  font-family: "BloggerSans Bold";
+
+  src:
+    url("../fonts/BloggerSansbold.woff2") format("woff2"),
+    url("../fonts/BloggerSansbold.woff") format("woff");
+    font-weight: 800;
+}
+
