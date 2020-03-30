@@ -1,0 +1,102 @@
+.pop-up__window {
+  background-color: $text-ordibary;
+  color: $text-ordibary;
+  width: 800px;
+  //height: 500px;
+  font-family: $font-regular;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -400px;
+  margin-top: -250px;
+
+  display: flex;
+}
+
+.pop-up__noDisplay {
+  display: none;
+}
+
+.pop-up__nav {
+  cursor: pointer;
+  position: absolute;
+  right: -10px;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  background-color: $background-light;
+}
+
+.pop-up__nav--close {
+  top: -10px;
+}
+
+.pop-up__nav--back {
+  bottom: -10px;
+}
+
+.pop-up__button-svg {
+  stroke: $text-ordibary;
+  fill: $text-ordibary;
+}
+
+.pop-up__nav:hover {
+  background-color: $text-select;
+}
+
+.pop-up__wrapper {
+  background-color: $background-light;
+  width: 600px;
+}
+
+.pop-up__text {
+  font-family: $font-regular;
+  font-size: 20px;
+
+  margin: 0;
+  padding: 25px 25px 0 25px;
+}
+
+.pop-up__list {
+  padding-top: 25px;
+  padding-left: 125px;
+  padding-bottom: 35px;
+}
+
+.pop-up__list-item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.pop-up__list-item-text {
+  font-size: 20px;
+}
+
+.pop-up__button {
+  cursor: pointer;
+  background-color: $text-ordibary;
+  height: 40px;
+  width: 350px;
+  font-size: 22px;
+  text-align: center;
+  border: none;
+}
+
+.pop-up__button:hover {
+  background-color: $text-select;
+}
+
+.pop-up__openwide-svg {
+  stroke: $text-select;
+}
+
+.pop-up__list-item-text {
+  cursor: default;
+}
+
+.pop-up__list-item-text:hover {
+  color: $text-select;
+}
+
+
+

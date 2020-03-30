@@ -3,9 +3,95 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <title>АнгарПро | HangarPRO</title>
 </head>
 <body>
+
+  <div style="display: none;">
+    <include src="source/img/sprite.svg"></include>
+  </div>
+
+  <!-- Попап окна системы помощи выбора -->
+  <section class='pop-up'>
+
+    <!-- Добро пожаловать -->
+    <article class='welcome-popup pop-up__window pop-up__noDisplay'>
+      <h2 class='visually-hidden pop-up__header'>Система помощи выбора конструкции ангара. Окно приветствия.</h2>
+
+      <div class='pop-up__nav pop-up__nav--close'>
+        <svg class='pop-up__button-svg' width='40' height='40'>
+          <use xlink:href='#icon-close'></use>
+        </svg>
+      </div>
+
+      <div class='pop-up__wrapper'>
+       <p class='text pop-up__text'>Добро пожаловать!<br><br>
+          Мы расскажем Вам о ключевых моментах и нюансах при строительстве быстровозводимых зданий.<br><br>
+          Всего 4 пункта по которым нам нужно определится:
+        </p>
+        <ul class='pop-up__list'>
+          <li class='pop-up__list-item'><input class='pop-up__button' type='button' value='Тип и конструкция фундамента'></li>
+          <li class='pop-up__list-item'><input class='pop-up__button' type='button' value='Конфигурация стального каркаса'></li>
+          <li class='pop-up__list-item'><input class='pop-up__button' type='button' value='Тип ограждений стен и кровли'></li>
+          <li class='pop-up__list-item'><input class='pop-up__button' type='button' value='Необходимые ворота, двери, окна'></li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- Фундаменты -->
+    <article class='basement-popup pop-up__window pop-up__noDisplay'>
+
+      <h2 class='visually-hidden pop-up__header'>Система помощи выбора конструкции ангара. Фундаменты.</h2>
+
+      <div class='pop-up__nav pop-up__nav--close'>
+        <svg class='pop-up__button-svg' width='40' height='40'>
+          <use xlink:href='#icon-close'></use>
+        </svg>
+      </div>
+
+      <div class='pop-up__nav pop-up__nav--back'>
+        <svg class='pop-up__button-svg' width='40' height='40'>
+          <use xlink:href='#icon-back'></use>
+        </svg>
+      </div>
+
+      <div class='pop-up__wrapper'>
+        <p class='text pop-up__text'>Итак фундамент.<br><br>
+          Выбор конструкции основания это непростая задача из-за большого количества различных факторов.
+          Вот они: рельеф участка, характеристики грунтов, нагрузки от здания, необходимость несущего пола и так далее.<br><br>
+          Но не печальтесь, мы поможем Вам сориентироваться:
+        </p>
+
+        <ul class='pop-up__list'>
+          <li class='pop-up__list-item'>
+            <svg class='pop-up__openwide-svg' width='30' height='15'>
+              <use xlink:href='#icon-openwide'></use>
+            </svg>
+            <span class='pop-up__list-item-text'>Монолитная железобетонная плита</span></li>
+          <li class='pop-up__list-item'>
+            <svg class='pop-up__openwide-svg' width='30' height='15'>
+              <use xlink:href='#icon-openwide'></use>
+            </svg>
+            <span class='pop-up__list-item-text'>Свайный фундамент</span></li>
+          <li class='pop-up__list-item'>
+            <svg class='pop-up__openwide-svg' width='30' height='15'>
+              <use xlink:href='#icon-openwide'></use>
+            </svg>
+            <span class='pop-up__list-item-text'>Ленточный железобетонный</span></li>
+          <li class='pop-up__list-item'>
+            <svg class='pop-up__openwide-svg' width='30' height='15'>
+              <use xlink:href='#icon-openwide'></use>
+            </svg>
+            <span class='pop-up__list-item-text'>Сборный из готовых ЖБ плит</span></li>
+        </ul>
+      </div>
+    </article>
+
+  </section>
+
+  <script src="js/pop-up.js"></script>
 
 </body>
 </html>

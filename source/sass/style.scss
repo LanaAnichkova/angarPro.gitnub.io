@@ -2,9 +2,10 @@
 //@import "mixings.scss";
 @import "fonts.scss";
 
+@import "system/global.scss";
 @import "system/normalize.scss";
 @import "system/visually-hidden.scss";
 
-//@import "blocks/body.scss";
+@import "blocks/popup.scss";
 
 //@import "blocks/header.scss";
