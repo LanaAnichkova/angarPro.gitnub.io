@@ -19,7 +19,7 @@
 }
 
 .pop-up__list-item:not(:last-child) {
-  margin-bottom: $pp-list_item-padding-bottom;
+  margin-bottom: $pp-common-padding;
 }
 
 .pop-up__button {
@@ -111,4 +111,35 @@
     padding-right: $pp-tablet-subcust-padding_right;
   }
 
+}
+
+@media (min-width: $desktop-width) {
+  .pop-up__text {
+    padding: $pp-common-padding $pp-desktop-common-padding 0 $pp-desktop-common-padding;
+  }
+
+  .pop-up__list {
+    padding-top: $pp-desktop-common-padding;
+    padding-left: $pp-desktop-common-padding * 1.5;
+    padding-bottom: $pp-desktop-common-padding;
+  }
+
+  .pop-up__buttons-list {
+    padding-left: $pp-desktop-buttons-padding-side;
+    padding-right: $pp-desktop-buttons-padding-side;
+  }
+
+  .pop-up__list-item-text {
+    padding-left: $pp-common-padding / 3;
+  }
+
+  .pop-up__list-item:not(:last-child) {
+    margin-bottom: $pp-desktop-list_item-padding-bottom;
+  }
+
+  .pop-up__subcast {
+    padding-left: $pp-tablet-subcust-padding_left;
+    padding-right: $pp-tablet-subcust-padding_right;
+  }
+  
 }

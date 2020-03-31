@@ -324,7 +324,7 @@ template {
   padding-right: 5%; }
 
 .pop-up__list-item:not(:last-child) {
-  margin-bottom: 20px; }
+  margin-bottom: 25px; }
 
 .pop-up__button {
   cursor: pointer;
@@ -394,6 +394,24 @@ template {
     padding-left: 12.5px; }
   .pop-up__list-item:not(:last-child) {
     margin-bottom: 25px; }
+  .pop-up__subcast {
+    padding-left: 15px;
+    padding-right: 20px; } }
+
+@media (min-width: 1440px) {
+  .pop-up__text {
+    padding: 25px 40px 0 40px; }
+  .pop-up__list {
+    padding-top: 40px;
+    padding-left: 60px;
+    padding-bottom: 40px; }
+  .pop-up__buttons-list {
+    padding-left: 20%;
+    padding-right: 20%; }
+  .pop-up__list-item-text {
+    padding-left: 8.33333px; }
+  .pop-up__list-item:not(:last-child) {
+    margin-bottom: 30px; }
   .pop-up__subcast {
     padding-left: 15px;
     padding-right: 20px; } }

@@ -1,11 +1,6 @@
 // common
-$pp-window-width: 850px;
-$pp-wrapper-width: 80%;
-$pp-border-radius: 10px;
-
-$pp-window-margin_left: 0 - $pp-window-width / 2;
-$pp-common-font_size: 20px;
 $pp-common-padding: 25px;
+$pp-border-radius: 10px;
 
 $pp-nav-height: 40px;
 $pp-nav-width: $pp-nav-height;
@@ -18,9 +13,6 @@ $pp-shadow-color: $background-dark;
 
 $pp-buttons-width: 100%;
 $pp-buttons-height: 45px;
-$pp-buttons-padding-side: 20%;
-$pp-list_item-padding-bottom: 20px;
-$pp-subcust-padding_left: 55px;
 
 $pp-time-to-animation: .3s;
 $pp-blackout-color: rgba(0, 0, 0, .5);
@@ -29,11 +21,12 @@ $pp-blackout-color: rgba(0, 0, 0, .5);
 $pp-mobile-window-width: 310px;
 $pp-mobile-font_size: 16px;
 $pp-mobile-nav-shift: 0;
+$pp-mobile-buttons-height: 40px;
 $pp-mobile-wrapper-width: 100%;
 $pp-mobile-common-padding: 10px;
 $pp-mobile-buttons-padding-side: 5%;
-$pp-mobile-buttons-height: 40px;
 $pp-mobile-subcust-padding_left: 5px;
+
 
 // tablet
 $pp-tablet-window-width: 700px;
@@ -50,8 +43,8 @@ $pp-tablet-subcust-padding_right: $pp-tablet-common-padding;
 $pp-desktop-window-width: 900px;
 $pp-desktop-font_size: 24px;
 $pp-desktop-wrapper-width: 75%;
-$pp-desktop-common-padding: 20px;
-$pp-desktop-buttons-padding-side: 15%;
-$pp-desktop-list_item-padding-bottom: 25px;
-$pp-desktop-subcust-padding_left: 15px;
+$pp-desktop-common-padding: 40px;
+$pp-desktop-buttons-padding-side: 20%;
+$pp-desktop-list_item-padding-bottom: 30px;
+$pp-desktop-subcust-padding_left: 55px;
 $pp-desktop-subcust-padding_right: $pp-desktop-common-padding;
