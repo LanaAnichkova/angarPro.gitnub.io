@@ -8,8 +8,9 @@ $buttons-width: 100%;
 $buttons-height: 40px;
 $buttons-padding-left: 20%;
 $list_item-padding-bottom: 20px;
-$subcust-padding_left: 35px;
+$subcust-padding_left: 55px;
 $border-radius: 10px;
+$time-to-animation: .3s;
 
 $nav-height: 40px;
 $nav-width: $nav-height;
@@ -149,15 +150,17 @@ $shadow-color: $background-dark;
 
 .pop-up__openwide-svg {
   stroke: $text-select;
-  cursor: pointer;
+  transform: rotate(0deg);
+  transition: $time-to-animation;
 }
 
 .pop-up__openwide-rotate {
-  transform: rotate(180deg);
+  transform: rotate(-180deg);
+  transition: $time-to-animation;
 }
 
 .pop-up__list-item-text {
-  cursor: pointer;
+  padding-left: $common-padding / 2;
 }
 
 .pop-up__subcast {
@@ -172,8 +175,18 @@ $shadow-color: $background-dark;
   padding-bottom: $common-padding * .5;
 }
 
-.pop-up__list-item-text:hover {
+.pop-up__list-item-wrapper {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.pop-up__list-item-wrapper:hover .pop-up__list-item-text{
   color: $text-select;
+}
+
+.pop-up__list-item-wrapper:hover .pop-up__openwide-svg{
+  transform: rotate(-90deg);
+  transition: $time-to-animation;
 }
 
 

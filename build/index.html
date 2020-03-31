@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <title>АнгарПро | HangarPRO</title>
+</head>
+<body>
+
+  <div style="display: none;">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-back"><path class="pop-up__button-svg" fill="#2B2A29" stroke="#2B2A29" stroke-miterlimit="22.926" d="M8 20l23.5 11.5v-23z"></path></symbol><symbol id="icon-close"><path class="pop-up__button-svg" fill="none" stroke="#ccc" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="22.926" d="M8.5 8.5l23 23m-23 0l23-23"></path></symbol><symbol id="icon-logo" viewBox="0 0 38.68 38.62"><g fill="#2B2A29"><path class="pop-up__logo-svg" fill-rule="nonzero" d="M14.16 28.08c.44 0 .81.15 1.12.45.3.31.45.67.45 1.1 0 .43-.15.79-.45 1.09-.31.3-.68.45-1.12.45h-.68v1.42h-1.03v-4.51h1.71zm0 2.13c.16 0 .29-.06.39-.17.1-.11.15-.25.15-.41 0-.16-.05-.3-.15-.41a.507.507 0 00-.39-.17h-.68v1.16h.68zm4.46 2.38l-.85-1.48h-.49v1.48h-1.03v-4.51h1.8c.43 0 .79.15 1.09.45.31.31.46.67.46 1.1 0 .27-.08.53-.23.76-.16.24-.36.42-.6.55l.95 1.65h-1.1zm-1.34-3.54v1.16h.77c.14 0 .26-.06.36-.17.11-.11.16-.25.16-.41 0-.16-.05-.3-.16-.41a.475.475 0 00-.36-.17h-.77zM23.95 32c-.45.45-1.01.68-1.66.68-.65 0-1.2-.23-1.66-.68-.45-.45-.68-1-.68-1.66 0-.66.23-1.22.68-1.67.46-.45 1.01-.68 1.66-.68.65 0 1.21.23 1.66.68.46.45.69 1.01.69 1.67 0 .66-.23 1.21-.69 1.66zm-2.59-.7c.25.25.56.38.93.38.38 0 .69-.13.94-.38s.38-.57.38-.96c0-.4-.13-.72-.38-.97s-.56-.37-.94-.37c-.37 0-.68.12-.93.37-.26.25-.38.57-.38.97 0 .39.12.71.38.96z"></path><path class="pop-up__logo-svg" d="M14.67 9.39L0 38.62h28.51l-2.67-5.66-16.25-.04 8.29-16.55-3.21-6.98zM31.6 38.62l7.08-.08L19.37 0l-3.26 6.5L31.6 38.62z"></path></g></symbol><symbol id="icon-logo_simple" viewBox="0 0 59.5 59.4"><path class="pop-up__logo-svg" fill="#2B2A29" d="M22.56 14.44L0 59.4h43.86l-4.11-8.69-25-.07L27.5 25.18l-4.94-10.74zM48.61 59.4l10.89-.12L29.8 0l-5.02 10 23.83 49.4z"></path></symbol><symbol id="icon-openwide"><path class="pop-up__openwide-svg" fill="none" stroke="#2B2A29" stroke-width="3" stroke-miterlimit="22.926" d="M2 2.5l13 10 13-10"></path></symbol></svg>
+  </div>
+
+  <!-- Попап окна системы помощи выбора -->
+  <section class="pop-up">
+
+    <!-- Добро пожаловать -->
+    <article class="welcome-popup pop-up__window pop-up__noDisplay">
+      <h2 class="visually-hidden pop-up__header">Система помощи выбора конструкции ангара. Окно приветствия.</h2>
+
+      <div class="pop-up__nav pop-up__nav--close pop-up__shadow">
+        <svg class="pop-up__button-svg" width="40" height="40">
+          <use xlink:href="#icon-close"></use>
+        </svg>
+      </div>
+
+      <div class="pop-up__wrapper">
+       <p class="text pop-up__text">Добро пожаловать!<br><br>
+          Мы расскажем Вам о ключевых моментах и нюансах при строительстве быстровозводимых зданий.<br><br>
+          Всего 4 пункта по которым нам нужно определится:
+        </p>
+        <ul class="pop-up__buttons-list pop-up__list">
+          <li class="pop-up__list-item"><input class="pop-up__button" type="button" value="Тип и конструкция фундамента"></li>
+          <li class="pop-up__list-item"><input class="pop-up__button" type="button" value="Конфигурация стального каркаса"></li>
+          <li class="pop-up__list-item"><input class="pop-up__button" type="button" value="Тип ограждений стен и кровли"></li>
+          <li class="pop-up__list-item"><input class="pop-up__button" type="button" value="Необходимые ворота, двери, окна"></li>
+        </ul>
+      </div>
+
+      <div class="pop-up__logo">
+        <svg class="pop-up__logo-svg">
+          <use xlink:href="#icon-logo_simple"></use>
+        </svg>
+      </div>
+    </article>
+
+    <!-- Фундаменты -->
+    <article class="basement-popup pop-up__window pop-up__noDisplay">
+
+      <h2 class="visually-hidden pop-up__header">Система помощи выбора конструкции ангара. Фундаменты.</h2>
+
+      <div class="pop-up__nav pop-up__nav--close pop-up__shadow">
+        <svg class="pop-up__button-svg" width="40" height="40">
+          <use xlink:href="#icon-close"></use>
+        </svg>
+      </div>
+
+      <div class="pop-up__nav pop-up__nav--back pop-up__shadow">
+        <svg class="pop-up__button-svg" width="40" height="40">
+          <use xlink:href="#icon-back"></use>
+        </svg>
+      </div>
+
+      <div class="pop-up__wrapper">
+        <p class="text pop-up__text">Итак фундамент.<br><br>
+          Выбор конструкции основания это непростая задача из-за большого количества различных факторов.<br>Вот они: рельеф участка, характеристики грунтов, нагрузки от здания, необходимость несущего пола и так далее.<br><br>
+          Но не печальтесь, мы поможем Вам сориентироваться:
+        </p>
+
+        <ul class="pop-up__list">
+
+          <li class="pop-up__list-item">
+            <div class="pop-up__list-item-wrapper">
+              <svg class="pop-up__openwide-svg" width="30" height="15">
+                <use xlink:href="#icon-openwide"></use>
+              </svg>
+              <span class="pop-up__list-item-text">Монолитная железобетонная плита</span>
+            </div>
+            <p class="pop-up__subcast pop-up__noDisplay">
+              Выбор монолитной плиты в качестве основания здания можно признать эффективным решением в случае строительства на заболоченных участках, торфяниках и прочих слабых грунтах.
+              <br><br>
+              Также плита применяется при необходимости тяжелого пола, когда нагрузки от здания сопостовимы с эксплуатационными нагрузками.
+              <br><br>
+              В большинстве случаев дешевле и проще не совмещать строительство фундамента здания и пола. Все-таки слишком разные требования предъявляются к полам и фундаментам.
+            </p>
+          </li>
+
+          <li class="pop-up__list-item">
+            <div class="pop-up__list-item-wrapper">
+              <svg class="pop-up__openwide-svg" width="30" height="15">
+                <use xlink:href="#icon-openwide"></use>
+              </svg>
+              <span class="pop-up__list-item-text">Свайный фундамент</span>
+            </div>
+            <p class="pop-up__subcast pop-up__noDisplay">
+              Я забиваю сваю<br><br><br><br><br><br><br><br>
+            </p>
+          </li>
+
+          <li class="pop-up__list-item">
+            <div class="pop-up__list-item-wrapper">
+              <svg class="pop-up__openwide-svg" width="30" height="15">
+                <use xlink:href="#icon-openwide"></use>
+              </svg>
+              <span class="pop-up__list-item-text">Ленточный железобетонный</span>
+            </div>
+            <p class="pop-up__subcast pop-up__noDisplay">
+              Пестрая лента<br><br><br><br><br><br><br><br>
+            </p>
+          </li>
+
+          <li class="pop-up__list-item">
+            <div class="pop-up__list-item-wrapper">
+              <svg class="pop-up__openwide-svg" width="30" height="15">
+                <use xlink:href="#icon-openwide"></use>
+              </svg>
+              <span class="pop-up__list-item-text">Сборный из готовых ЖБ плит</span>
+            </div>
+            <p class="pop-up__subcast pop-up__noDisplay">
+              Если удалось спереть плиты<br><br><br><br><br><br><br><br>
+            </p>
+           </li>
+
+        </ul>
+      </div>
+
+      <div class="pop-up__logo">
+        <svg class="pop-up__logo-svg">
+          <use xlink:href="#icon-logo_simple"></use>
+        </svg>
+      </div>
+    </article>
+
+    <!-- Каркас -->
+    <article class="frame-popup pop-up__window pop-up__noDisplay">
+
+      <h2 class="visually-hidden pop-up__header">Система помощи выбора конструкции ангара. Каркас.</h2>
+
+      <div class="pop-up__nav pop-up__nav--close pop-up__shadow">
+        <svg class="pop-up__button-svg" width="40" height="40">
+          <use xlink:href="#icon-close"></use>
+        </svg>
+      </div>
+
+      <div class="pop-up__nav pop-up__nav--back pop-up__shadow">
+        <svg class="pop-up__button-svg" width="40" height="40">
+          <use xlink:href="#icon-back"></use>
+        </svg>
+      </div>
+
+      <div class="pop-up__wrapper">
+        <p class="text pop-up__text">Каркас.<br><br>
+          Выбор конструкции основания это непростая задача из-за большого количества различных факторов.<br>Вот они: рельеф участка, характеристики грунтов, нагрузки от здания, необходимость несущего пола и так далее.<br><br>
+          Но не печальтесь, мы поможем Вам сориентироваться:
+        </p>
+
+        <ul class="pop-up__list">
+
+          <li class="pop-up__list-item">
+            <div class="pop-up__list-item-wrapper">
+              <svg class="pop-up__openwide-svg" width="30" height="15">
+                <use xlink:href="#icon-openwide"></use>
+              </svg>
+              <span class="pop-up__list-item-text">Сортаменты металлопроката</span>
+              <p class="pop-up__subcast pop-up__noDisplay">
+                Трубы, трубы, трубы
+              </p>
+            </div>
+          </li>
+
+          <li class="pop-up__list-item">
+            <div class="pop-up__list-item-wrapper">
+              <svg class="pop-up__openwide-svg" width="30" height="15">
+                <use xlink:href="#icon-openwide"></use>
+              </svg>
+              <span class="pop-up__list-item-text">Марки сталей</span>
+              <p class="pop-up__subcast pop-up__noDisplay">
+                Течет сталь
+              </p>
+            </div>
+          </li>
+
+          <li class="pop-up__list-item">
+            <div class="pop-up__list-item-wrapper">
+              <svg class="pop-up__openwide-svg" width="30" height="15">
+                <use xlink:href="#icon-openwide"></use>
+              </svg>
+              <span class="pop-up__list-item-text">Соединение элементов каркаса</span>
+              <p class="pop-up__subcast pop-up__noDisplay">
+                Эй Гаечка!!!
+              </p>
+            </div>
+          </li>
+
+          <li class="pop-up__list-item">
+            <div class="pop-up__list-item-wrapper">
+              <svg class="pop-up__openwide-svg" width="30" height="15">
+                <use xlink:href="#icon-openwide"></use>
+              </svg>
+              <span class="pop-up__list-item-text">Финишное покрытие каркаса</span>
+              <p class="pop-up__subcast pop-up__noDisplay">
+                Красим-малярим
+              </p>
+            </div>
+          </li>
+
+          <li class="pop-up__list-item">
+            <div class="pop-up__list-item-wrapper">
+              <svg class="pop-up__openwide-svg" width="30" height="15">
+                <use xlink:href="#icon-openwide"></use>
+              </svg>
+              <span class="pop-up__list-item-text">Огневая защита</span>
+              <p class="pop-up__subcast pop-up__noDisplay">
+                Пенка
+              </p>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
+      <div class="pop-up__logo">
+        <svg class="pop-up__logo-svg">
+          <use xlink:href="#icon-logo_simple"></use>
+        </svg>
+      </div>
+    </article>
+
+    <!-- Ограждения -->
+    <article class="fencing-popup pop-up__window pop-up__noDisplay">
+
+      <h2 class="visually-hidden pop-up__header">Система помощи выбора конструкции ангара. Ограждения.</h2>
+
+      <div class="pop-up__nav pop-up__nav--close pop-up__shadow">
+        <svg class="pop-up__button-svg" width="40" height="40">
+          <use xlink:href="#icon-close"></use>
+        </svg>
+      </div>
+
+      <div class="pop-up__nav pop-up__nav--back pop-up__shadow">
+        <svg class="pop-up__button-svg" width="40" height="40">
+          <use xlink:href="#icon-back"></use>
+        </svg>
+      </div>
+
+      <div class="pop-up__wrapper">
+        <p class="text pop-up__text">Ограждения кровли и стен.<br><br>
+          Выбор конструкции основания это непростая задача из-за большого количества различных факторов.<br>Вот они: рельеф участка, характеристики грунтов, нагрузки от здания, необходимость несущего пола и так далее.<br><br>
+          Но не печальтесь, мы поможем Вам сориентироваться:
+        </p>
+
+        <ul class="pop-up__list">
+
+          <li class="pop-up__list-item">
+            <div class="pop-up__list-item-wrapper">
+              <svg class="pop-up__openwide-svg" width="30" height="15">
+                <use xlink:href="#icon-openwide"></use>
+              </svg>
+              <span class="pop-up__list-item-text">Сендвич-панели</span>
+              <p class="pop-up__subcast pop-up__noDisplay">
+                Опишем сендвичи.
+              </p>
+            </div>
+          </li>
+
+          <li class="pop-up__list-item">
+            <div class="pop-up__list-item-wrapper">
+              <svg class="pop-up__openwide-svg" width="30" height="15">
+                <use xlink:href="#icon-openwide"></use>
+              </svg>
+              <span class="pop-up__list-item-text">Профилированный стальной лист</span>
+              <p class="pop-up__subcast pop-up__noDisplay">
+                Профнастил
+              </p>
+            </div>
+          </li>
+
+          <li class="pop-up__list-item">
+            <div class="pop-up__list-item-wrapper">
+              <svg class="pop-up__openwide-svg" width="30" height="15">
+                <use xlink:href="#icon-openwide"></use>
+              </svg>
+              <span class="pop-up__list-item-text">Тентовая ПВХ-ткань</span>
+              <p class="pop-up__subcast pop-up__noDisplay">
+                Надоела, зараза
+              </p>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
+      <div class="pop-up__logo">
+        <svg class="pop-up__logo-svg">
+          <use xlink:href="#icon-logo_simple"></use>
+        </svg>
+      </div>
+    </article>
+
+    <!-- Заполнения проемов -->
+    <article class="opening-popup pop-up__window pop-up__noDisplay">
+
+      <h2 class="visually-hidden pop-up__header">Система помощи выбора конструкции ангара. Ворота, окна, двери.</h2>
+
+      <div class="pop-up__nav pop-up__nav--close pop-up__shadow">
+        <svg class="pop-up__button-svg" width="40" height="40">
+          <use xlink:href="#icon-close"></use>
+        </svg>
+      </div>
+
+      <div class="pop-up__nav pop-up__nav--back pop-up__shadow">
+        <svg class="pop-up__button-svg" width="40" height="40">
+          <use xlink:href="#icon-back"></use>
+        </svg>
+      </div>
+
+      <div class="pop-up__wrapper">
+        <p class="text pop-up__text">Заполнение проемов.<br><br>
+          Выбор конструкции основания это непростая задача из-за большого количества различных факторов.<br>Вот они: рельеф участка, характеристики грунтов, нагрузки от здания, необходимость несущего пола и так далее.<br><br>
+          Но не печальтесь, мы поможем Вам сориентироваться:
+        </p>
+
+        <ul class="pop-up__list">
+
+          <li class="pop-up__list-item">
+            <div class="pop-up__list-item-wrapper">
+              <svg class="pop-up__openwide-svg" width="30" height="15">
+                <use xlink:href="#icon-openwide"></use>
+              </svg>
+              <span class="pop-up__list-item-text">Ворота</span>
+              <p class="pop-up__subcast pop-up__noDisplay">
+                Распахнем
+              </p>
+            </div>
+          </li>
+
+          <li class="pop-up__list-item">
+            <div class="pop-up__list-item-wrapper">
+              <svg class="pop-up__openwide-svg" width="30" height="15">
+                <use xlink:href="#icon-openwide"></use>
+              </svg>
+              <span class="pop-up__list-item-text">Окна</span>
+              <p class="pop-up__subcast pop-up__noDisplay">
+                Инсоляция жи
+              </p>
+            </div>
+          </li>
+
+          <li class="pop-up__list-item">
+            <div class="pop-up__list-item-wrapper">
+              <svg class="pop-up__openwide-svg" width="30" height="15">
+                <use xlink:href="#icon-openwide"></use>
+              </svg>
+              <span class="pop-up__list-item-text">Двери</span>
+              <p class="pop-up__subcast pop-up__noDisplay">
+                Вход - рубль
+              </p>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
+      <div class="pop-up__logo">
+        <svg class="pop-up__logo-svg">
+          <use xlink:href="#icon-logo_simple"></use>
+        </svg>
+      </div>
+    </article>
+
+  </section>
+
+  <script src="js/pop-up.js"></script>
+
+</body>
+</html>
