@@ -1,14 +1,6 @@
-$buttons-width: 100%;
-$buttons-height: 40px;
-$buttons-padding-left: 20%;
-$list_item-padding-bottom: 20px;
-$subcust-padding_left: 55px;
-
-$time-to-animation: .3s;
-
 .pop-up__text {
   margin: 0;
-  padding: $common-padding $common-padding 0 $common-padding;
+  padding: $pp-common-padding $pp-mobile-common-padding 0 $pp-mobile-common-padding;
 }
 
 .pop-up__dark-text {
@@ -16,28 +8,28 @@ $time-to-animation: .3s;
 }
 
 .pop-up__list {
-  padding-top: $common-padding;
-  padding-left: $common-padding * 2;
-  padding-bottom: $common-padding * 1.5;
+  padding-top: $pp-mobile-common-padding * 3;
+  padding-left: $pp-mobile-common-padding;
+  padding-bottom: $pp-mobile-common-padding * 5;
 }
 
 .pop-up__buttons-list {
-  padding-left: $buttons-padding-left;
-  padding-right: $buttons-padding-left;
+  padding-left: $pp-mobile-buttons-padding-side;
+  padding-right: $pp-mobile-buttons-padding-side;
 }
 
 .pop-up__list-item:not(:last-child) {
-  margin-bottom: $list_item-padding-bottom;
+  margin-bottom: $pp-list_item-padding-bottom;
 }
 
 .pop-up__button {
   cursor: pointer;
   background-color: $text-ordibary;
-  height: $buttons-height;
-  width: $buttons-width;
+  height: $pp-mobile-buttons-height;
+  width: $pp-buttons-width;
   text-align: center;
   border: none;
-  border-radius: $border-radius / 2;
+  border-radius: $pp-border-radius / 2;
   font-family: $font-medium;
 }
 
@@ -48,28 +40,27 @@ $time-to-animation: .3s;
 .pop-up__openwide-svg {
   stroke: $text-select;
   transform: rotate(0deg);
-  transition: $time-to-animation;
+  transition: $pp-time-to-animation;
 }
 
 .pop-up__openwide-rotate {
   transform: rotate(-180deg);
-  transition: $time-to-animation;
+  transition: $pp-time-to-animation;
 }
 
 .pop-up__list-item-text {
-  padding-left: $common-padding / 2;
+  padding-left: $pp-common-padding / 2;
 }
 
 .pop-up__subcast {
-  font-size: $common-font_size;
-  padding-left: $subcust-padding_left;
-  padding-right: $common-padding;
+  padding-left: $pp-mobile-subcust-padding_left;
+  padding-right: $pp-mobile-subcust-padding_left;
   margin-bottom: 0;
-  padding-bottom: $common-padding;
+  padding-bottom: $pp-common-padding;
 }
 
 .pop-up__list-item:last-child .pop-up__subcast {
-  padding-bottom: $common-padding * .5;
+  padding-bottom: $pp-common-padding * .5;
 }
 
 .pop-up__list-item-wrapper {
@@ -83,5 +74,41 @@ $time-to-animation: .3s;
 
 .pop-up__list-item-wrapper:hover .pop-up__openwide-svg{
   transform: rotate(-90deg);
-  transition: $time-to-animation;
+  transition: $pp-time-to-animation;
+}
+
+@media (min-width: $tablet-width) {
+  .pop-up__text {
+    padding: $pp-common-padding $pp-tablet-common-padding 0 $pp-tablet-common-padding;
+  }
+
+  .pop-up__list {
+    padding-top: $pp-tablet-common-padding * 2;
+    padding-left: $pp-tablet-common-padding * 1.5;
+    padding-bottom: $pp-tablet-common-padding * 2;
+  }
+
+  .pop-up__buttons-list {
+    padding-left: $pp-tablet-buttons-padding-side;
+    padding-right: $pp-tablet-buttons-padding-side;
+  }
+
+  .pop-up__button {
+    height: $pp-buttons-height;
+    width: $pp-buttons-width;
+  }
+
+  .pop-up__list-item-text {
+    padding-left: $pp-common-padding / 2;
+  }
+
+  .pop-up__list-item:not(:last-child) {
+    margin-bottom: $pp-tablet-list_item-padding-bottom;
+  }
+
+  .pop-up__subcast {
+    padding-left: $pp-tablet-subcust-padding_left;
+    padding-right: $pp-tablet-subcust-padding_right;
+  }
+
 }
