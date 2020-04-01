@@ -1,8 +1,8 @@
 .pop-up {
-  position: fixed;
+  position: absolute;
   display: flex;
   width: 100%;
-  height: 100%;
+  height: auto;
   justify-content: center;
   align-items: center;
   background-color: $pp-blackout-color;
@@ -22,7 +22,6 @@
   border-radius: $pp-border-radius;
   cursor: default;
   position: absolute;
-  display: flex;
   user-select: none;
 }
 
@@ -41,11 +40,11 @@
 }
 
 .pop-up__nav--close {
-  top: $pp-mobile-nav-shift;
+  top: $pp-mobile-nav-shift - 20px;
 }
 
 .pop-up__nav--back {
-  bottom: $pp-mobile-nav-shift;
+  bottom: $pp-mobile-nav-shift - 20px;
 }
 
 .pop-up__button-svg {

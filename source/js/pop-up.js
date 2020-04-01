@@ -20,6 +20,8 @@
       buttonPrev.removeEventListener('click', onPrevWelcomeClick);
     }
     popup.classList.add('pop-up__noDisplay');
+    popup.classList.remove('pop-up__Display');
+    document.removeEventListener('resize', onResize);
   }
 
   // Обработчик кнопки возврата в попап Welcome
@@ -31,11 +33,33 @@
     }
   }
 
+  // Расчет размера враппера окна
+  var setWrapperHeight = function (popup) {
+    var heightPopup = popup.offsetHeight + 50;
+    var heightWindow = document.defaultView.innerHeight;
+
+    if (heightPopup > heightWindow) {
+      popup.offsetParent.style.height = String(heightPopup) + 'px';
+    } else {
+      popup.offsetParent.style.height = '100%';
+    }
+  }
+
+  // Обработчик изменения ориентации экрана
+  var onResize = function (evt) {
+    var popup = document.querySelector('.pop-up__Display');
+    setWrapperHeight(popup);
+  }
+
   // Открытие попапа
   var openPopup = function (popup) {
     popup.classList.remove('pop-up__noDisplay');
+    popup.classList.add('pop-up__Display');
     var closeButton = popup.querySelector('.pop-up__nav--close');
     closeButton.addEventListener('click', onCloseClick);
+    setWrapperHeight(popup);
+
+    window.addEventListener('resize', onResize);
   }
 
   // Welcome
@@ -77,31 +101,20 @@
     }
   }
 
-  // Перед открытием попапа не Welcome
-  var beforeOpen = function (popup) {
-    var subcastCollection = popup.querySelectorAll('.pop-up__subcast');
-    var SVGCollection = popup.querySelectorAll('.pop-up__openwide-svg');
-    for (var i=0; i < subcastCollection.length; i++) {
-      subcastCollection[i].classList.add('pop-up__noDisplay');
-      SVGCollection[i].classList.remove('pop-up__openwide-rotate');
-    }
-  }
-
   // После открытием попапа не Welcome
   var afterOpen = function (popup) {
     var prevButton = popup.querySelector('.pop-up__nav--back');
     prevButton.addEventListener('click', onPrevWelcomeClick);
 
-    var subcast = popup.querySelectorAll('.pop-up__list-item-wrapper');
-    for (var i=0; i < subcast.length; i++) {
-      subcast[i].addEventListener('click', onSubcastClick);
+    var buttonsCollection = popup.querySelectorAll('.pop-up__button');
+    for (var i = 0; i < buttonsCollection.length; i++) {
+      buttonsCollection[i].addEventListener('click', onSubcastClick);
     }
   }
 
   // Basement
   var openBasement = function () {
     var popup = document.querySelector('.basement-popup');
-    beforeOpen(popup);
     openPopup(popup);
     afterOpen(popup);
   }
@@ -109,7 +122,6 @@
   // Frame
   var openFrame = function () {
     var popup = document.querySelector('.frame-popup');
-    beforeOpen(popup);
     openPopup(popup);
     afterOpen(popup);
   }
@@ -117,7 +129,6 @@
   // Fencing
   var openFencing = function () {
     var popup = document.querySelector('.fencing-popup');
-    beforeOpen(popup);
     openPopup(popup);
     afterOpen(popup);
   }
@@ -125,7 +136,6 @@
   // Opening
   var openOpening = function () {
     var popup = document.querySelector('.opening-popup');
-    beforeOpen(popup);
     openPopup(popup);
     afterOpen(popup);
   }
@@ -133,25 +143,13 @@
   // Обработчики для кнопок на попапах не Welcome
   var onSubcastClick = function (evt) {
     if (evt.which == 1) {
-      var popupText = this.parentElement.offsetParent.querySelector('.pop-up__text');
-      var subcastCurrent = this.parentElement.querySelector('.pop-up__subcast');
-      var svgCurrent = this.querySelector('.pop-up__openwide-svg');
-      subcastShowHide(popupText, subcastCurrent, svgCurrent);
+      closePopup(this.offsetParent);
     }
   }
 
   // Скрытие или показ подкаста в попапе
-  var subcastShowHide = function (popupText, subcastCurrent, svgCurrent) {
+  var subcastShowHide = function () {
 
-    if (subcastCurrent.classList == 'pop-up__subcast pop-up__noDisplay') {
-      subcastCurrent.classList.remove('pop-up__noDisplay');
-      popupText.classList.add('pop-up__dark-text');
-      svgCurrent.classList.add('pop-up__openwide-rotate');
-    } else {
-      subcastCurrent.classList.add('pop-up__noDisplay');
-      popupText.classList.remove('pop-up__dark-text')
-      svgCurrent.classList.remove('pop-up__openwide-rotate');
-    }
   }
 
   // Временное принудительное открытие окна

@@ -1,21 +1,21 @@
 @font-face {
-  font-family: "BloggerSans Light";
-  src: url("../fonts/BloggerSanslight.woff2") format("woff2"), url("../fonts/BloggerSanslight.woff") format("woff");
+  font-family: "Bloggersans Light";
+  src: url("../fonts/Bloggersanslight.woff2") format("woff2"), url("../fonts/Bloggersanslight.woff") format("woff");
   font-weight: 200; }
 
 @font-face {
-  font-family: "BloggerSans Regular";
-  src: url("../fonts/BloggerSans.woff2") format("woff2"), url("../fonts/BloggerSans.woff") format("woff");
+  font-family: "Bloggersans Regular";
+  src: url("../fonts/Bloggersans.woff2") format("woff2"), url("../fonts/Bloggersans.woff") format("woff");
   font-weight: 400; }
 
 @font-face {
-  font-family: "BloggerSans Medium";
-  src: url("../fonts/BloggerSansmedium.woff2") format("woff2"), url("../fonts/BloggerSansmedium.woff") format("woff");
+  font-family: "Bloggersans Medium";
+  src: url("../fonts/Bloggersansmedium.woff2") format("woff2"), url("../fonts/Bloggersansmedium.woff") format("woff");
   font-weight: 600; }
 
 @font-face {
-  font-family: "BloggerSans Bold";
-  src: url("../fonts/BloggerSansbold.woff2") format("woff2"), url("../fonts/BloggerSansbold.woff") format("woff");
+  font-family: "Bloggersans Bold";
+  src: url("../fonts/Bloggersansbold.woff2") format("woff2"), url("../fonts/Bloggersansbold.woff") format("woff");
   font-weight: 800; }
 
 body {
@@ -195,12 +195,12 @@ template {
   overflow: hidden; }
 
 .pop-up {
-  position: fixed;
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  height: 100%;
+  height: auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -211,8 +211,8 @@ template {
   z-index: 100; }
 
 .pop-up__shadow {
-  -webkit-box-shadow: 0px 0px 3px 0 #000712;
-          box-shadow: 0px 0px 3px 0 #000712; }
+  -webkit-box-shadow: 0px 0px 2px 0 #000712;
+          box-shadow: 0px 0px 2px 0 #000712; }
 
 .pop-up__window {
   background-color: #f2e2dd;
@@ -223,9 +223,6 @@ template {
   border-radius: 10px;
   cursor: default;
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -244,10 +241,10 @@ template {
   border-radius: 3.33333px; }
 
 .pop-up__nav--close {
-  top: 0; }
+  top: -20px; }
 
 .pop-up__nav--back {
-  bottom: 0; }
+  bottom: -20px; }
 
 .pop-up__button-svg {
   stroke: #f2e2dd;
@@ -339,44 +336,6 @@ template {
 .pop-up__button:hover {
   background-color: #f89554; }
 
-.pop-up__openwide-svg {
-  stroke: #f89554;
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-  -webkit-transition: 0.3s;
-  transition: 0.3s; }
-
-.pop-up__openwide-rotate {
-  -webkit-transform: rotate(-180deg);
-          transform: rotate(-180deg);
-  -webkit-transition: 0.3s;
-  transition: 0.3s; }
-
-.pop-up__list-item-text {
-  padding-left: 12.5px; }
-
-.pop-up__subcast {
-  padding-left: 5px;
-  padding-right: 5px;
-  margin-bottom: 0;
-  padding-bottom: 25px; }
-
-.pop-up__list-item:last-child .pop-up__subcast {
-  padding-bottom: 12.5px; }
-
-.pop-up__list-item-wrapper {
-  cursor: pointer;
-  display: inline-block; }
-
-.pop-up__list-item-wrapper:hover .pop-up__list-item-text {
-  color: #f89554; }
-
-.pop-up__list-item-wrapper:hover .pop-up__openwide-svg {
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-  -webkit-transition: 0.3s;
-  transition: 0.3s; }
-
 @media (min-width: 768px) {
   .pop-up__text {
     padding: 25px 20px 0 20px; }
@@ -390,13 +349,8 @@ template {
   .pop-up__button {
     height: 45px;
     width: 100%; }
-  .pop-up__list-item-text {
-    padding-left: 12.5px; }
   .pop-up__list-item:not(:last-child) {
-    margin-bottom: 25px; }
-  .pop-up__subcast {
-    padding-left: 15px;
-    padding-right: 20px; } }
+    margin-bottom: 25px; } }
 
 @media (min-width: 1440px) {
   .pop-up__text {
@@ -408,12 +362,7 @@ template {
   .pop-up__buttons-list {
     padding-left: 20%;
     padding-right: 20%; }
-  .pop-up__list-item-text {
-    padding-left: 8.33333px; }
   .pop-up__list-item:not(:last-child) {
-    margin-bottom: 30px; }
-  .pop-up__subcast {
-    padding-left: 15px;
-    padding-right: 20px; } }
+    margin-bottom: 30px; } }
 
 /*# sourceMappingURL=style.css.map */
