@@ -1,0 +1,31 @@
+.info {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+
+  height: 100%;
+}
+
+.info__noDisplay {
+  display: none;
+}
+
+.info__popup {
+  background-color: $background-light;
+  color: $text-ordibary;
+  width: $pp-mobile-window-width - $pp-mobile-common-padding * 2;
+  font-family: $font-regular;
+  font-size: $pp-mobile-font_size * 1.1;
+  border-radius: $pp-border-radius;
+  cursor: default;
+  position: absolute;
+  user-select: none;
+}
+
+.info__text {
+  margin: 0;
+  padding: $pp-common-padding $pp-mobile-common-padding $pp-common-padding $pp-mobile-common-padding;
+}

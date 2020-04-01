@@ -59,12 +59,13 @@
     closeButton.addEventListener('click', onCloseClick);
     setWrapperHeight(popup);
 
+    document.querySelector('.pop-up').classList.add('pop-up--blackout')
     window.addEventListener('resize', onResize);
   }
 
   // Welcome
   var openWelcome = function () {
-    var popup = document.querySelector('.welcome-popup');
+    var popup = document.querySelector('.pop-up__welcome');
     openPopup(popup);
     var buttonWelcome = popup.querySelectorAll('.pop-up__button');
     for (var i = 0; i < buttonWelcome.length; i++) {
@@ -114,28 +115,28 @@
 
   // Basement
   var openBasement = function () {
-    var popup = document.querySelector('.basement-popup');
+    var popup = document.querySelector('.pop-up__basement');
     openPopup(popup);
     afterOpen(popup);
   }
 
   // Frame
   var openFrame = function () {
-    var popup = document.querySelector('.frame-popup');
+    var popup = document.querySelector('.pop-up__frame');
     openPopup(popup);
     afterOpen(popup);
   }
 
   // Fencing
   var openFencing = function () {
-    var popup = document.querySelector('.fencing-popup');
+    var popup = document.querySelector('.pop-up__fencing');
     openPopup(popup);
     afterOpen(popup);
   }
 
   // Opening
   var openOpening = function () {
-    var popup = document.querySelector('.opening-popup');
+    var popup = document.querySelector('.pop-up__opening');
     openPopup(popup);
     afterOpen(popup);
   }
@@ -147,12 +148,33 @@
     }
   }
 
-  // Скрытие или показ подкаста в попапе
-  var subcastShowHide = function () {
+  // Открытие окон info
+  var openInfo = function (info) {
+    document.querySelector('.pop-up').classList.remove('pop-up--blackout')
+    document.querySelector('.info').classList.add('pop-up--blackout')
+    document.querySelector('.info').classList.remove('info__noDisplay')
+    info.classList.remove('info__noDisplay');
+    info.querySelector('.info__close').addEventListener('click', onClickCloseInfo);
+  }
 
+  // Закрытие окон info
+  var closeInfo = function (info) {
+    document.querySelector('.pop-up').classList.add('pop-up--blackout')
+    document.querySelector('.info').classList.remove('pop-up--blackout')
+    document.querySelector('.info').classList.add('info__noDisplay')
+    info.classList.add('info__noDisplay');
+    info.querySelector('.info__close').removeEventListener('click', onClickCloseInfo);
+  }
+
+  // Обработчик кнопки закрытия info
+  var onClickCloseInfo = function (evt) {
+    var info = this.offsetParent;
+    closeInfo(info);
   }
 
   // Временное принудительное открытие окна
   openWelcome();
+  var info = document.querySelector('.info__popup');
+  openInfo(info);
 
 })();

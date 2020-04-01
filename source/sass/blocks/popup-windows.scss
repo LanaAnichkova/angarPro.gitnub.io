@@ -1,12 +1,14 @@
+.pop-up--blackout {
+  background-color: $pp-blackout-color;
+}
+
 .pop-up {
   position: absolute;
   display: flex;
   width: 100%;
-  height: auto;
   justify-content: center;
   align-items: center;
-  background-color: $pp-blackout-color;
-  z-index: 100;
+  z-index: 80;
 }
 
 .pop-up__shadow {
