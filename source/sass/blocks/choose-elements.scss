@@ -1,0 +1,84 @@
+.choose__text {
+  margin: 0;
+  padding-left: $pp-mobile-side-padding;
+  padding-right: $pp-mobile-side-padding;
+  padding-top: $pp-mobile-top-padding;
+  padding-bottom: $pp-mobile-bottom-padding;
+}
+
+.choose__dark-text {
+  color: $text-background;
+}
+
+.choose__list {
+  padding-top: 0;
+  padding-left: $pp-mobile-buttons-padding-side;
+  padding-right: $pp-mobile-buttons-padding-side;
+  padding-bottom: $pp-mobile-bottom-padding;
+}
+
+.choose__list-item:not(:last-child) {
+  margin-bottom: $pp-common-padding;
+}
+
+.choose__button {
+  cursor: pointer;
+  background-color: $text-ordibary;
+  height: $pp-mobile-buttons-height;
+  width: $pp-buttons-width;
+  text-align: center;
+  border: none;
+  border-radius: $pp-border-radius / 2;
+  font-family: $font-medium;
+}
+
+.choose__button:hover {
+  background-color: $text-select;
+}
+
+@media (min-width: $tablet-width) {
+  .choose__text {
+    padding-left: $pp-tablet-side-padding;
+    padding-right: $pp-tablet-side-padding;
+    padding-top: $pp-tablet-top-padding;
+    padding-bottom: $pp-tablet-bottom-padding;
+  }
+
+  .choose__list {
+    padding-top: 0;
+    padding-left: $pp-tablet-buttons-padding-side;
+    padding-right: $pp-tablet-buttons-padding-side;
+    padding-bottom: $pp-tablet-bottom-padding;
+  }
+
+  .choose__button {
+    height: $pp-buttons-height;
+    width: $pp-buttons-width;
+  }
+
+  .choose__list-item:not(:last-child) {
+    margin-bottom: $pp-tablet-list_item-padding-bottom;
+  }
+
+}
+
+@media (min-width: $desktop-width) {
+  .choose__text {
+    padding-left: $pp-desktop-side-padding;
+    padding-right: $pp-desktop-side-padding;
+    padding-top: $pp-desktop-top-padding;
+    padding-bottom: $pp-desktop-bottom-padding;
+  }
+
+  .choose__list {
+    padding-top: 0;
+    padding-left: $pp-desktop-buttons-padding-side;
+    padding-right: $pp-desktop-buttons-padding-side;
+    padding-bottom: $pp-desktop-bottom-padding;
+  }
+
+  .choose__list-item:not(:last-child) {
+    margin-bottom: $pp-desktop-list_item-padding-bottom;
+  }
+
+}

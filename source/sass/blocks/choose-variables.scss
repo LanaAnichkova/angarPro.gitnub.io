@@ -22,7 +22,11 @@ $pp-mobile-font_size: 16px;
 $pp-mobile-nav-shift: 0;
 $pp-mobile-buttons-height: 40px;
 $pp-mobile-wrapper-width: 100%;
-$pp-mobile-common-padding: 10px;
+
+$pp-mobile-side-padding: 10px;
+$pp-mobile-top-padding: 25px;
+$pp-mobile-bottom-padding: 35px;
+
 $pp-mobile-buttons-padding-side: 5%;
 
 // tablet
@@ -30,7 +34,11 @@ $pp-tablet-window-width: 700px;
 $pp-tablet-font_size: 22px;
 $pp-tablet-nav-shift: -10px;
 $pp-tablet-wrapper-width: 80%;
-$pp-tablet-common-padding: 20px;
+
+$pp-tablet-side-padding: 20px;
+$pp-tablet-top-padding: 25px;
+$pp-tablet-bottom-padding: 50px;
+
 $pp-tablet-buttons-padding-side: 15%;
 $pp-tablet-list_item-padding-bottom: 25px;
 
@@ -38,6 +46,10 @@ $pp-tablet-list_item-padding-bottom: 25px;
 $pp-desktop-window-width: 900px;
 $pp-desktop-font_size: 24px;
 $pp-desktop-wrapper-width: 75%;
-$pp-desktop-common-padding: 40px;
+
+$pp-desktop-side-padding: 40px;
+$pp-desktop-top-padding: 25px;
+$pp-desktop-bottom-padding: 50px;
+
 $pp-desktop-buttons-padding-side: 20%;
 $pp-desktop-list_item-padding-bottom: 30px;

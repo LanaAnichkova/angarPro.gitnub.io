@@ -1,240 +1,342 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang='ru'>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/style.min.css">
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <link rel='stylesheet' href='css/style.min.css'>
   <title>АнгарПро | HangarPRO</title>
 </head>
 <body>
 
-  <div style="display: none;">
-    <include src="source/img/sprite.svg"></include>
+  <div style='display: none;'>
+    <include src='source/img/sprite.svg'></include>
   </div>
 
   <!-- Попап окна системы помощи выбора -->
-  <section class='pop-up'>
+  <section class='choose'>
 
     <!-- Добро пожаловать -->
-    <article class='pop-up__welcome pop-up__window pop-up__noDisplay'>
-      <h2 class='visually-hidden pop-up__header'>Система помощи выбора конструкции ангара. Окно приветствия.</h2>
+    <article class='choose__window choose__window--0 choose__noDisplay'>
 
-      <div class='pop-up__nav pop-up__nav--close pop-up__shadow'>
-        <svg class='pop-up__button-svg' width='40' height='40'>
+      <h2 class='choose__header visually-hidden '>Система помощи выбора конструкции ангара. Окно приветствия.</h2>
+
+      <div class='choose__nav choose__nav--close'>
+        <svg class='choose__button-svg' width='40' height='40'>
           <use xlink:href='#icon-close'></use>
         </svg>
       </div>
 
-      <div class='pop-up__wrapper'>
-       <p class='text pop-up__text'>Добро пожаловать!<br><br>
+      <div class='choose__wrapper'>
+       <p class='text choose__text'>Добро пожаловать!<br><br>
           Мы расскажем Вам о ключевых моментах и нюансах при строительстве быстровозводимых зданий.<br><br>
           Всего 4 пункта по которым нам нужно определится:
         </p>
-        <ul class='pop-up__buttons-list pop-up__list'>
-          <li class='pop-up__list-item'><input class='pop-up__button' type='button' value='Тип и конструкция фундамента'></li>
-          <li class='pop-up__list-item'><input class='pop-up__button' type='button' value='Конфигурация стального каркаса'></li>
-          <li class='pop-up__list-item'><input class='pop-up__button' type='button' value='Тип ограждений стен и кровли'></li>
-          <li class='pop-up__list-item'><input class='pop-up__button' type='button' value='Необходимые ворота, двери, окна'></li>
+        <ul class='choose__buttons-list choose__list'>
+          <li class='choose__list-item'><input class='choose__button' type='button' value='Тип и конструкция фундамента'></li>
+          <li class='choose__list-item'><input class='choose__button' type='button' value='Конфигурация стального каркаса'></li>
+          <li class='choose__list-item'><input class='choose__button' type='button' value='Тип ограждений стен и кровли'></li>
+          <li class='choose__list-item'><input class='choose__button' type='button' value='Необходимые ворота, двери, окна'></li>
         </ul>
       </div>
 
-      <div class='pop-up__logo'>
-        <svg class='pop-up__logo-svg'>
+      <div class='choose__logo'>
+        <svg class='choose__logo-svg'>
           <use xlink:href='#icon-logo_simple'></use>
         </svg>
       </div>
+
     </article>
 
     <!-- Фундаменты -->
-    <article class='pop-up__basement pop-up__window pop-up__noDisplay'>
+    <article class='choose__window choose__window--1 choose__noDisplay'>
 
-      <h2 class='visually-hidden pop-up__header'>Система помощи выбора конструкции ангара. Фундаменты.</h2>
+      <h2 class='choose__header visually-hidden'>Система помощи выбора конструкции ангара. Фундаменты.</h2>
 
-      <div class='pop-up__nav pop-up__nav--close pop-up__shadow'>
-        <svg class='pop-up__button-svg' width='40' height='40'>
+      <div class='choose__nav choose__nav--close'>
+        <svg class='choose__button-svg' width='40' height='40'>
           <use xlink:href='#icon-close'></use>
         </svg>
       </div>
 
-      <div class='pop-up__nav pop-up__nav--back pop-up__shadow'>
-        <svg class='pop-up__button-svg' width='40' height='40'>
+      <div class='choose__nav choose__nav--back'>
+        <svg class='choose__button-svg' width='40' height='40'>
           <use xlink:href='#icon-back'></use>
         </svg>
       </div>
 
-      <div class='pop-up__wrapper'>
-        <p class='text pop-up__text'>Итак фундамент.<br><br>
+      <div class='choose__wrapper'>
+        <p class='choose__text'>Итак фундамент.<br><br>
           Выбор конструкции основания это непростая задача из-за большого количества различных факторов.<br>Вот они: рельеф участка, характеристики грунтов, нагрузки от здания, необходимость несущего пола и так далее.<br><br>
           Но не печальтесь, мы поможем Вам сориентироваться:
         </p>
 
-        <ul class='pop-up__buttons-list pop-up__list'>
-          <li class='pop-up__list-item'><input class='pop-up__button' type='button' value='Монолитная железобетонная плита'></li>
-          <li class='pop-up__list-item'><input class='pop-up__button' type='button' value='Свайный фундамент'></li>
-          <li class='pop-up__list-item'><input class='pop-up__button' type='button' value='Ленточный железобетонный'></li>
-          <li class='pop-up__list-item'><input class='pop-up__button' type='button' value='Фундамент из плит'></li>
+        <ul class='choose__list'>
+          <li class='choose__list-item'><input class='choose__button' type='button' value='Монолитная железобетонная плита'></li>
+          <li class='choose__list-item'><input class='choose__button' type='button' value='Свайный фундамент'></li>
+          <li class='choose__list-item'><input class='choose__button' type='button' value='Ленточный железобетонный'></li>
+          <li class='choose__list-item'><input class='choose__button' type='button' value='Фундамент из плит'></li>
         </ul>
       </div>
 
-      <div class='pop-up__logo'>
-        <svg class='pop-up__logo-svg'>
+      <div class='choose__logo'>
+        <svg class='choose__logo-svg'>
           <use xlink:href='#icon-logo_simple'></use>
         </svg>
       </div>
+
+
+
     </article>
 
     <!-- Каркас -->
-    <article class='pop-up__frame pop-up__window pop-up__noDisplay'>
+    <article class='choose__window choose__window--2 choose__noDisplay'>
 
-      <h2 class='visually-hidden pop-up__header'>Система помощи выбора конструкции ангара. Каркас.</h2>
+      <h2 class='choose__header visually-hidden '>Система помощи выбора конструкции ангара. Каркас.</h2>
 
-      <div class='pop-up__nav pop-up__nav--close pop-up__shadow'>
-        <svg class='pop-up__button-svg' width='40' height='40'>
+      <div class='choose__nav choose__nav--close'>
+        <svg class='choose__button-svg' width='40' height='40'>
           <use xlink:href='#icon-close'></use>
         </svg>
       </div>
 
-      <div class='pop-up__nav pop-up__nav--back pop-up__shadow'>
-        <svg class='pop-up__button-svg' width='40' height='40'>
+      <div class='choose__nav choose__nav--back'>
+        <svg class='choose__button-svg' width='40' height='40'>
           <use xlink:href='#icon-back'></use>
         </svg>
       </div>
 
-      <div class='pop-up__wrapper'>
-        <p class='text pop-up__text'>
+      <div class='choose__wrapper'>
+        <p class='choose__text'>
           Каркас быстровозводимого здания.<br><br>
           Основным несущим элементом здания является стальной каркас. Каркас определяет архитектурную форму и несущую способность сооружения. Высокое качество проектирования и изготовления каркаса гарантируют надежность и долговечность здания.<br><br>
           Информация по нашим каркасам:
         </p>
 
-        <ul class='pop-up__buttons-list pop-up__list'>
-          <li class='pop-up__list-item'><input class='pop-up__button' type='button' value='Сортаменты металлопроката'></li>
-          <li class='pop-up__list-item'><input class='pop-up__button' type='button' value='Марки сталей'></li>
-          <li class='pop-up__list-item'><input class='pop-up__button' type='button' value='Соединение элементов каркаса'></li>
-          <li class='pop-up__list-item'><input class='pop-up__button' type='button' value='Финишное покрытие каркаса'></li>
-          <li class='pop-up__list-item'><input class='pop-up__button' type='button' value='Огневая защита'></li>
+        <ul class='choose__list'>
+          <li class='choose__list-item'><input class='choose__button' type='button' value='Сортаменты металлопроката'></li>
+          <li class='choose__list-item'><input class='choose__button' type='button' value='Марки сталей'></li>
+          <li class='choose__list-item'><input class='choose__button' type='button' value='Соединение элементов каркаса'></li>
+          <li class='choose__list-item'><input class='choose__button' type='button' value='Финишное покрытие каркаса'></li>
+          <li class='choose__list-item'><input class='choose__button' type='button' value='Огневая защита'></li>
         </ul>
       </div>
 
-      <div class='pop-up__logo'>
-        <svg class='pop-up__logo-svg'>
+      <div class='choose__logo'>
+        <svg class='choose__logo-svg'>
           <use xlink:href='#icon-logo_simple'></use>
         </svg>
       </div>
     </article>
 
     <!-- Ограждения -->
-    <article class='pop-up__fencing pop-up__window pop-up__noDisplay'>
+    <article class='choose__window choose__window--3 choose__noDisplay'>
 
-      <h2 class='visually-hidden pop-up__header'>Система помощи выбора конструкции ангара. Ограждения.</h2>
+      <h2 class='choose__header visually-hidden '>Система помощи выбора конструкции ангара. Ограждения.</h2>
 
-      <div class='pop-up__nav pop-up__nav--close pop-up__shadow'>
-        <svg class='pop-up__button-svg' width='40' height='40'>
+      <div class='choose__nav choose__nav--close'>
+        <svg class='choose__button-svg' width='40' height='40'>
           <use xlink:href='#icon-close'></use>
         </svg>
       </div>
 
-      <div class='pop-up__nav pop-up__nav--back pop-up__shadow'>
-        <svg class='pop-up__button-svg' width='40' height='40'>
+      <div class='choose__nav choose__nav--back'>
+        <svg class='choose__button-svg' width='40' height='40'>
           <use xlink:href='#icon-back'></use>
         </svg>
       </div>
 
-      <div class='pop-up__wrapper'>
-        <p class='text pop-up__text'>
+      <div class='choose__wrapper'>
+        <p class='choose__text'>
           Ограждения стен и кровли.<br><br>
           Ограждающие конструкции — элементы конструкций, составляющие наружную оболочку здания или разделяющие его на отдельные помещения.<br><br>
           Мы строим сооружения с ограждениями следующих видов:
         </p>
 
-        <ul class='pop-up__buttons-list pop-up__list'>
-          <li class='pop-up__list-item'><input class='pop-up__button' type='button' value='Сендвич-панели'></li>
-          <li class='pop-up__list-item'><input class='pop-up__button' type='button' value='Профилированный стальной лист'></li>
-          <li class='pop-up__list-item'><input class='pop-up__button' type='button' value='Тентовая ПВХ-ткань'></li>
+        <ul class='choose__list'>
+          <li class='choose__list-item'><input class='choose__button' type='button' value='Сендвич-панели'></li>
+          <li class='choose__list-item'><input class='choose__button' type='button' value='Профилированный стальной лист'></li>
+          <li class='choose__list-item'><input class='choose__button' type='button' value='Тентовая ПВХ-ткань'></li>
         </ul>
       </div>
 
-      <div class='pop-up__logo'>
-        <svg class='pop-up__logo-svg'>
+      <div class='choose__logo'>
+        <svg class='choose__logo-svg'>
           <use xlink:href='#icon-logo_simple'></use>
         </svg>
       </div>
     </article>
 
     <!-- Заполнения проемов -->
-    <article class='pop-up__opening pop-up__window pop-up__noDisplay'>
+    <article class='choose__window choose__window--4 choose__noDisplay'>
 
-      <h2 class='visually-hidden pop-up__header'>Система помощи выбора конструкции ангара. Ворота, окна, двери.</h2>
+      <h2 class='choose__header visually-hidden '>Система помощи выбора конструкции ангара. Ворота, окна, двери.</h2>
 
-      <div class='pop-up__nav pop-up__nav--close pop-up__shadow'>
-        <svg class='pop-up__button-svg' width='40' height='40'>
+      <div class='choose__nav choose__nav--close'>
+        <svg class='choose__button-svg' width='40' height='40'>
           <use xlink:href='#icon-close'></use>
         </svg>
       </div>
 
-      <div class='pop-up__nav pop-up__nav--back pop-up__shadow'>
-        <svg class='pop-up__button-svg' width='40' height='40'>
+      <div class='choose__nav choose__nav--back'>
+        <svg class='choose__button-svg' width='40' height='40'>
           <use xlink:href='#icon-back'></use>
         </svg>
       </div>
 
-      <div class='pop-up__wrapper'>
-        <p class='text pop-up__text'>
+      <div class='choose__wrapper'>
+        <p class='choose__text'>
           Заполнение проемов здания.<br><br>
           Окна, двери и ворота - элементы заполнения проемов сооружений. По требованиям заказчиков мы устанавливаем различные как по конструкции, так и по цене заполнения.<br><br>
           Ознакомится с нашим предложением:
         </p>
 
-        <ul class='pop-up__buttons-list pop-up__list'>
-          <li class='pop-up__list-item'><input class='pop-up__button' type='button' value='Ворота'></li>
-          <li class='pop-up__list-item'><input class='pop-up__button' type='button' value='Окна'></li>
-          <li class='pop-up__list-item'><input class='pop-up__button' type='button' value='Двери'></li>
+        <ul class='choose__list'>
+          <li class='choose__list-item'><input class='choose__button' type='button' value='Ворота'></li>
+          <li class='choose__list-item'><input class='choose__button' type='button' value='Окна'></li>
+          <li class='choose__list-item'><input class='choose__button' type='button' value='Двери'></li>
         </ul>
       </div>
 
-      <div class='pop-up__logo'>
-        <svg class='pop-up__logo-svg'>
+      <div class='choose__logo'>
+        <svg class='choose__logo-svg'>
           <use xlink:href='#icon-logo_simple'></use>
         </svg>
       </div>
     </article>
 
+    <!-- Описание фундаментов -->
+    <section class='choose__info-section choose__info-section--1 choose__noDisplay'>
+      <!-- Описание плитного фундамента -->
+      <article class='choose__info-window choose__info-window--1 choose__noDisplay'>
+
+        <div class='choose__nav choose__nav--close choose__close'>
+          <svg class='choose__button-svg' width='40' height='40'>
+            <use xlink:href='#icon-close'></use>
+          </svg>
+        </div>
+
+        <p class='choose__info-text'>
+          Выбор монолитной плиты в качестве основания здания можно признать эффективным решением в случае строительства на заболоченных участках, торфяниках и прочих слабых грунтах.
+          <br><br>
+          Также плита применяется при необходимости тяжелого пола, когда нагрузки от здания сопостовимы с эксплуатационными нагрузками.
+          <br><br>
+          В большинстве случаев дешевле и проще не совмещать строительство фундамента здания и пола. Все-таки слишком разные требования предъявляются к полам и фундаментам.
+        </p>
+      </article>
+
+      <!--  Описание свайного фундамента -->
+      <article class='choose__info-window choose__info-window--2 choose__noDisplay'>
+
+        <div class='choose__nav choose__nav--close choose__shadow choose__close'>
+          <svg class='choose__button-svg' width='40' height='40'>
+            <use xlink:href='#icon-close'></use>
+          </svg>
+        </div>
+
+        <p class='choose__info-text'>
+          A здесь про свайный фундамент<br><br>
+        </p>
+      </article>
+
+      <!--  Описание ленточного фундамента -->
+      <article class='choose__info-window choose__info-window--3 choose__noDisplay'>
+
+        <div class='choose__nav choose__nav--close choose__shadow choose__close'>
+          <svg class='choose__button-svg' width='40' height='40'>
+            <use xlink:href='#icon-close'></use>
+          </svg>
+        </div>
+
+        <p class='choose__info-text'>
+          Сказ про ленточный фундамент<br><br>
+        </p>
+      </article>
+
+      <!--  Описание сборного фундамента -->
+      <article class='choose__info-window choose__info-window--4 choose__noDisplay'>
+
+        <div class='choose__nav choose__nav--close choose__shadow choose__close'>
+          <svg class='choose__button-svg' width='40' height='40'>
+            <use xlink:href='#icon-close'></use>
+          </svg>
+        </div>
+
+        <p class='choose__info-text'>
+          История про сборный плитный фундамент<br><br>
+        </p>
+      </article>
+
+    </section>
+
+    <!-- Описание каркасов -->
+    <section class='choose__info-section choose__info-section--2 choose__noDisplay'>
+      <!-- Описание плитного фундамента -->
+      <article class='choose__info-window choose__info-window--1 choose__noDisplay'>
+
+        <div class='choose__nav choose__nav--close choose__close'>
+          <svg class='choose__button-svg' width='40' height='40'>
+            <use xlink:href='#icon-close'></use>
+          </svg>
+        </div>
+
+        <p class='choose__info-text'>
+          Выбор монолитной плиты в качестве основания здания можно признать эффективным решением в случае строительства на заболоченных участках, торфяниках и прочих слабых грунтах.
+          <br><br>
+          Также плита применяется при необходимости тяжелого пола, когда нагрузки от здания сопостовимы с эксплуатационными нагрузками.
+          <br><br>
+          В большинстве случаев дешевле и проще не совмещать строительство фундамента здания и пола. Все-таки слишком разные требования предъявляются к полам и фундаментам.
+        </p>
+      </article>
+
+      <!--  Описание свайного фундамента -->
+      <article class='choose__info-window choose__info-window--2 choose__noDisplay'>
+
+        <div class='choose__nav choose__nav--close choose__shadow choose__close'>
+          <svg class='choose__button-svg' width='40' height='40'>
+            <use xlink:href='#icon-close'></use>
+          </svg>
+        </div>
+
+        <p class='choose__info-text'>
+          A здесь про свайный фундамент<br><br>
+        </p>
+      </article>
+
+      <!--  Описание ленточного фундамента -->
+      <article class='choose__info-window choose__info-window--3 choose__noDisplay'>
+
+        <div class='choose__nav choose__nav--close choose__shadow choose__close'>
+          <svg class='choose__button-svg' width='40' height='40'>
+            <use xlink:href='#icon-close'></use>
+          </svg>
+        </div>
+
+        <p class='choose__info-text'>
+          Сказ про ленточный фундамент<br><br>
+        </p>
+      </article>
+
+      <!--  Описание сборного фундамента -->
+      <article class='choose__info-window choose__info-window--4 choose__noDisplay'>
+
+        <div class='choose__nav choose__nav--close choose__shadow choose__close'>
+          <svg class='choose__button-svg' width='40' height='40'>
+            <use xlink:href='#icon-close'></use>
+          </svg>
+        </div>
+
+        <p class='choose__info-text'>
+          История про сборный плитный фундамент<br><br>
+        </p>
+      </article>
+
+    </section>
+
+
   </section>
 
-  <!-- Описание фундаментов -->
-  <section class="info info__noDisplay">
-    <!-- Описание плитного фундамента -->
-    <article class="info__popup info__noDisplay">
-
-      <div class='pop-up__nav pop-up__nav--close pop-up__shadow info__close'>
-        <svg class='pop-up__button-svg' width='40' height='40'>
-          <use xlink:href='#icon-close'></use>
-        </svg>
-      </div>
-
-      <p class="info__text">
-        Выбор монолитной плиты в качестве основания здания можно признать эффективным решением в случае строительства на заболоченных участках, торфяниках и прочих слабых грунтах.
-        <br><br>
-        Также плита применяется при необходимости тяжелого пола, когда нагрузки от здания сопостовимы с эксплуатационными нагрузками.
-        <br><br>
-        В большинстве случаев дешевле и проще не совмещать строительство фундамента здания и пола. Все-таки слишком разные требования предъявляются к полам и фундаментам.
-      </p>
-    </article>
-
-    <!--  Описание свайного фундамента -->
-    <article class="info__popup info__noDisplay">
-      <p class="info__text">
-        A здесь про каркас
-        <br><br>
-        Также плита применяется при необходимости тяжелого пола, когда нагрузки от здания сопостовимы с эксплуатационными нагрузками.
-        <br><br>
-        В большинстве случаев дешевле и проще не совмещать строительство фундамента здания и пола. Все-таки слишком разные требования предъявляются к полам и фундаментам.
-      </p>
-    </article>
-  </section>
-
-  <script src="js/pop-up.js"></script>
+  <script src='js/choose.js'></script>
 
 </body>
 </html>
