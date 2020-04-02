@@ -35,9 +35,10 @@
   width: $pp-nav-width;
   background-color: $text-select;
   border-radius: $pp-border-radius / 3;
-  stroke: $text-ordibary;
-  fill: $text-ordibary;
-}
+  border: none;
+  padding: 0;
+  margin: 0;
+} 
 
 .choose__nav--close {
   top: $pp-mobile-nav-shift - 20px;
@@ -47,13 +48,13 @@
   bottom: $pp-mobile-nav-shift - 20px;
 }
 
+.choose__nav:hover, .choose__nav:focus {
+  background-color: $text-select;
+}
+
 .choose__button-svg {
   stroke: $text-ordibary;
   fill: $text-ordibary;
-}
-
-.choose__nav:hover {
-  background-color: $text-select;
 }
 
 .choose__wrapper {
@@ -93,7 +94,6 @@
 
   .choose__nav {
     right: $pp-tablet-nav-shift;
-    background-color: $text-select;
   }
 
   .choose__nav--close {
@@ -126,5 +126,10 @@
   .choose__logo-svg {
     display: block;
   }
+  .choose__nav {
+    right: $pp-desktop-nav-shift;
+    background-color: $text-background;
+  }
+
 }
 

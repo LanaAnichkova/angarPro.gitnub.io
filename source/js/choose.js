@@ -18,9 +18,15 @@
 
   // Обработчик кнопки закрытия текущего попапа
   var onCloseClick = function (evt) {
-    if (evt.which == 1) {
-      var popup = this.offsetParent;
-      closePopup(popup);
+    if (evt.button === constants.MAIN_MOUSE_BUTTON) {
+      closePopup(this.offsetParent);
+    }
+  }
+
+  var onKeyDown = function (evt) {
+    if (evt.key === constants.ESCAPE_ACTION) {
+      var chooseSection = document.querySelector('.choose');
+      chooseSection.classList.add('choose__noDisplay');
     }
   }
 
@@ -66,6 +72,7 @@
 
     document.querySelector('.choose').classList.add('choose__blackout')
     window.addEventListener('resize', onResize);
+    document.addEventListener('keydown', onKeyDown);
 
     // Если есть кнопка prev
     var prevButton = popup.querySelector('.choose__nav--back');
@@ -119,6 +126,8 @@
     infoWrapper.classList.add('choose__blackout');
     infoWindow.classList.remove('choose__noDisplay');
     infoWindow.querySelector('.choose__nav--close').addEventListener('click', onClickCloseInfo);
+
+    setWrapperHeight(infoWindow);
   }
 
   // Закрытие окон info
@@ -140,14 +149,23 @@
   // Обработчики для кнопок на попапах не Welcome
   var onInfoClick = function (evt) {
     if (evt.which == 1) {
-      var popup = this.offsetParent;
-      var buttons = popup.querySelectorAll('.choose__button');
-      var buttonCurrent = this;
-      var buttonsArray = Array.prototype.slice.call(buttons);
-      var buttonCurrentNumber = buttonsArray.indexOf(buttonCurrent);
+      var popupNodes = document.querySelectorAll('.choose__window');      // Коллекция попапов
+      var popupArray = Array.prototype.slice.call(popupNodes);            // Массив попапов
 
-      var className = '.choose__info-window--' + String(buttonCurrentNumber+1);
-      var infoWindow = document.querySelector(className);
+      var popupCurrent = this.offsetParent;                               // Текущий попап
+      var buttonNodes = popupCurrent.querySelectorAll('.choose__button'); // Коллекция кнопок текущего попапа
+      var buttonsArray = Array.prototype.slice.call(buttonNodes);         // Массив кнопок
+
+      var buttonCurrent = this;                                           // Нажатая кнопка
+      var popupCurrentNumber = popupArray.indexOf(popupCurrent);          // Номер текущего попапа
+      var buttonCurrentNumber = buttonsArray.indexOf(buttonCurrent);      // Номер нажатой кнопки
+
+      var info_sectionClassName = '.choose__info-section--' + String(popupCurrentNumber);
+      var infoSection = document.querySelector(info_sectionClassName);
+
+      var info_windowclassName = '.choose__info-window--' + String(buttonCurrentNumber + 1);
+      var infoWindow = infoSection.querySelector(info_windowclassName);
+
       openInfo(infoWindow)
     }
   }

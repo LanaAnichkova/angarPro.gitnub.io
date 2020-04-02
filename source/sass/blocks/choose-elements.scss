@@ -32,7 +32,7 @@
   font-family: $font-medium;
 }
 
-.choose__button:hover {
+.choose__button:hover, .choose__button:focus {
   background-color: $text-select;
 }
 
