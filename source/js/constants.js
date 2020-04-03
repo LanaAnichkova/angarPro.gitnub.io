@@ -9,4 +9,8 @@
     MAIN_MOUSE_BUTTON: 0,
   };
 
+  window.tree = {
+    CHOOSE_SECTION: document.querySelector('.choose')
+  }
+
 })();

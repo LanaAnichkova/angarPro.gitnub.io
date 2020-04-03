@@ -25,8 +25,7 @@
 
   var onKeyDown = function (evt) {
     if (evt.key === constants.ESCAPE_ACTION) {
-      var chooseSection = document.querySelector('.choose');
-      chooseSection.classList.add('choose__noDisplay');
+      window.tree.CHOOSE_SECTION.classList.add('choose__noDisplay');
     }
   }
 
@@ -45,6 +44,8 @@
     popup.classList.add('choose__noDisplay');
     popup.classList.remove('choose__Display');
     document.removeEventListener('resize', onResize);
+
+    window.tree.CHOOSE_SECTION.classList.remove('choose__blackout');
   }
 
   // Обработчик кнопки prev
@@ -70,7 +71,7 @@
     closeButton.addEventListener('click', onCloseClick);
     setWrapperHeight(popup);
 
-    document.querySelector('.choose').classList.add('choose__blackout')
+    window.tree.CHOOSE_SECTION.classList.add('choose__blackout')
     window.addEventListener('resize', onResize);
     document.addEventListener('keydown', onKeyDown);
 
@@ -96,6 +97,7 @@
     for (var i = 0; i < buttonWelcome.length; i++) {
       buttonWelcome[i].addEventListener('click', onButtonWelcomeClick);
     }
+
   }
 
   // Обработчики для кнопок на попапе Welcome
@@ -120,7 +122,7 @@
 
   // Открытие окон info
   var openInfo = function (infoWindow) {
-    document.querySelector('.choose').classList.remove('choose__blackout');
+    window.tree.CHOOSE_SECTION.classList.remove('choose__blackout');
     var infoWrapper = infoWindow.parentElement;
     infoWrapper.classList.remove('choose__noDisplay');
     infoWrapper.classList.add('choose__blackout');
@@ -132,7 +134,7 @@
 
   // Закрытие окон info
   var closeInfo = function (infoWindow) {
-    document.querySelector('.choose').classList.add('choose__blackout');
+    window.tree.CHOOSE_SECTION.classList.add('choose__blackout');
     var infoWrapper = infoWindow.parentElement;
     infoWrapper.classList.add('choose__noDisplay');
     infoWrapper.classList.remove('choose__blackout');
